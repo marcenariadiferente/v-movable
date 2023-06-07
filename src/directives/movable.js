@@ -81,7 +81,7 @@ Vue.directive('movable',{
     const init = () => {
       setBounds();
       const halt=etarget=>
-        etarget.getAttribute('move-disabled') || etarget.getAttribute('moveid') === targetId || !childOf(moveId, etarget) || isMoving;
+        target.getAttribute('move-disabled') || etarget.getAttribute('moveid') === targetId || !childOf(moveId, etarget) || isMoving;
 
       if (window.PointerEvent || window.MSPointerEvent) {
         document.body.addEventListener(pointerEvents.start, (event) => {
