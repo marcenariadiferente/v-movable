@@ -9,9 +9,6 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-  import '../directives/movable';
-
   export default {
     data: () => {
       return {
@@ -94,7 +91,7 @@
         if (vm.isMoving){
           return;
         }
-        Vue.nextTick().then(()=>{
+        vm.$nextTick().then(()=>{
           vm[k] = Number(v);
         });
       }

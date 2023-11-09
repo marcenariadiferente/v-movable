@@ -1,7 +1,3 @@
-import Vue from 'vue';
-
-let shift = false;
-
 //region utils
 const pxVal = v => isFinite(v) ? Number(v) : Number(v.replace(/[^0-9.\-]/g,''));
 const childOf = (pid, child) => {
@@ -30,14 +26,14 @@ const guid = ()=> 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, functi
 });
 //endregion
 
-Vue.directive('movable',{
-  update(el,binding){
-
+export default {
+  update (el,binding) {
     if (el.getAttribute('moveid')){
       return;//don't continuously rebind
     }
 
     let args = binding.value;
+
     if (!!args.disabled){
       return;
     }
@@ -233,15 +229,6 @@ Vue.directive('movable',{
       return coord;
     };
 
-    const rpcCall = (action,arg) => {
-      console.log({rpc:{action,arg}})
-      if (action === 'shift'){
-        shift=arg;
-      }
-    };
-
     init();
-
-    args.directiveInit(rpcCall);
   }
-});
+}

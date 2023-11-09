@@ -1,7 +1,10 @@
-import Vue from 'vue';
-import movable from './components/movable.vue';
+import component from './components/movable.vue';
+import directive from './directives/movable';
+
 export default {
   install(Vue) {
-    Vue.component("movable", movable);
+    Vue.directive("movable", directive)
+    Vue.component("movable", component);
   }
 };
+

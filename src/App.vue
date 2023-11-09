@@ -14,10 +14,8 @@
 </template>
 
 <script>
-  import movable from './components/movable';
   export default {
     name: 'app',
-    components:{movable}
   }
 </script>
 
