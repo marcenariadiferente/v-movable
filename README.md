@@ -1,7 +1,7 @@
 # v-movable [![npm version](https://badge.fury.io/js/@marcenariadiferente%2Fv-movable.svg)](https://badge.fury.io/js/@marcenariadiferente%2Fv-movable) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 A vue component or component wrapper that makes an element movable and its movements can be customized.
 
-[Live Demo](http://thewebkid.com/modules/v-movable)
+[Live Demo](http://marcenariadiferente.github.io/v-movable)
 
 ## Installation
     npm i --save @marcenariadiferente/v-movable
